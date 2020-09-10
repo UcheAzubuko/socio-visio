@@ -1,0 +1,57 @@
+.container {
+  overflow: hidden;
+  max-width: $max-width;
+  margin: auto;
+}
+
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+
+  &-2 {
+    padding: 2rem 0;
+  }
+
+  &-3 {
+    padding: 3rem 0;
+  }
+}
+
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+
+  &-2 {
+    margin: 2rem 0;
+  }
+}
+
+.boards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.board {
+  background: $board-color;
+  border-radius: 3px;
+
+  &:hover {
+    background: lighten($board-color, 8%);
+    cursor: pointer;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.increase {
+  color: #1db489;
+}
+
+.decrease {
+  color: #c4032a;
+}

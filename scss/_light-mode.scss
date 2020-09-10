@@ -1,0 +1,37 @@
+body.light {
+  background: #fff;
+  color: #1e202a;
+  transition: all 0.3s;
+
+  .board {
+    background: #f0f2fa;
+
+    &:hover {
+      background: darken(#f0f2fa, 8%);
+    }
+  }
+
+  // Header
+  #header {
+    .header-wrap {
+      .header-text,
+      .toggle-text {
+        color: #63687e;
+      }
+    }
+  }
+
+  #section {
+    &-b {
+      .section-title {
+        color: #63687e;
+      }
+
+      .overview {
+        &-header {
+          color: #63687e;
+        }
+      }
+    }
+  }
+}

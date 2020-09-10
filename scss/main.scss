@@ -1,0 +1,208 @@
+@import "config";
+@import "utilities";
+@import "light-mode";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+  line-height: 1.5;
+  background: rgb(30, 32, 42);
+  color: #fff;
+  transition: all 0.3s;
+}
+
+
+// Header
+#header {
+  .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.3rem;
+
+    .header-name {
+      font-size: 1.9rem;
+    }
+
+    .header-text,
+    .toggle-text {
+      color: $dark-text;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .page-theme {
+      display: flex;
+      align-items: center;
+
+      .toggle-text {
+        margin-right: 0.7rem;
+      }
+
+      .label {
+        position: relative;
+        display: inline-block;
+        width: 2.6rem;
+        height: 1.1rem;
+        background-image: linear-gradient(to right, #378fe6, #3eda82);
+        border-radius: 2rem;
+
+        .ball{
+          position: absolute;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background-color: $toggle-dark;
+          top: 1px; // TO GIVE AN EFFECT OF CIRCLE INSIDE SWITCH
+          left: 2px;
+          transition: all 0.3s;
+        }
+      }
+
+      .checkbox:checked + .label .ball {
+        left: 1.5rem;
+        background-color: #fff;
+      }
+
+      .checkbox:checked + .label {
+        background-image: none;
+        background-color: $toggle-light;
+      }
+
+      .checkbox {
+        display: none;
+      }
+    }
+  }
+}
+
+#section {
+  &-a {
+    .showcase-board {
+      padding: 2rem;
+    }
+
+    .board {
+      &-1 {
+        border-top: 0.2rem solid #198ff5;
+      }
+      &-2 {
+        border-top: 0.2rem solid #1ca0f2;
+      }
+      &-3 {
+        border-top: 0.2rem solid #df4996;
+      }
+      &-4 {
+        border-top: 0.2rem solid #c4032a;
+      }
+
+      .social-info-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          margin-right: 0.5rem;
+        }
+
+        .username {
+          font-size: 0.9rem;
+          color: $dark-text;
+          font-weight: bold;
+        }
+      }
+
+      .social-followers {
+        font-size: 3.2rem;
+        font-weight: bold;
+      }
+
+      .social-followers-subtext {
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $dark-text;
+        letter-spacing: 0.3rem;
+      }
+
+      .social-info-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+        i {
+          margin-right: 0.3rem;
+          font-size: 0.9rem;
+        }
+
+        .showcase-rate {
+          font-size: 0.9rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &-b {
+    .overview {
+      &-board {
+        height: 4.5rem;
+        padding: 1rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &-header,
+      &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &-rate {
+        display: flex;
+        font-size: 0.8rem;
+        align-items: center;
+        font-weight: bold;
+
+        i {
+          margin-right: 0.3rem;
+        }
+      }
+
+      &-header {
+        font-size: 0.9rem;
+        color: $dark-text;
+        font-weight: bold;
+      }
+
+      &-number {
+        font-size: 1.7rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+#footer {
+  margin-top: 2.5rem;
+  padding: 2rem 0;
+
+  .footer-text {
+    font-size: 0.75rem;
+
+    a {
+      color: #3e52a3;
+    }
+  }
+}
+
+
+// Import Media Queries
+@import 'media';

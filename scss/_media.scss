@@ -1,0 +1,199 @@
+// Tablets and smaller
+@media (max-width: 1050px) {
+  // Utility
+  .container {
+    margin: 0 5rem;
+  }
+
+  .boards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+// A SEPERATE MEDIA QUERY FOR ROTATED SCREENS LARGER THAN 500PX THAT STYLES THE HEADER
+@media (max-width: 568px) {
+  // Utility
+  .container {
+    margin: 0 2.5rem;
+  }
+
+  // Header
+  #header {
+    .header-wrap {
+      display: block;
+      padding-top: 2.3rem;
+
+      .logo {
+        padding-bottom: 1.6rem;
+        border-bottom: 1px solid rgba(99, 104, 126, 0.5);
+      }
+
+      .header-name {
+        font-size: 1.5rem;
+      }
+
+      .header-text,
+      .toggle-text {
+        font-size: 0.7rem;
+      }
+
+      .page-theme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.2rem;
+
+        .switch {
+          width: 2.2rem;
+          height: 1rem;
+          border-radius: 1rem;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0.8rem;
+            height: 0.8rem;
+            top: 2px; // TO GIVE AN EFFECT OF CIRCLE INSIDE SWITCH
+            left: 2px;
+          }
+        }
+
+        .checkbox:checked + .switch::after {
+          left: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  // Utility
+  .container {
+    margin: 0 2.5rem;
+  }
+
+  .boards {
+    display: block;
+  }
+
+  // Header
+  #header {
+    .header-wrap {
+      display: block;
+      padding-top: 2.3rem;
+
+      .logo {
+        padding-bottom: 1.6rem;
+        border-bottom: 1px solid rgba(99, 104, 126, 0.5);
+      }
+
+      .header-name {
+        font-size: 1.5rem;
+      }
+
+      .header-text,
+      .toggle-text {
+        font-size: 0.7rem;
+      }
+
+      .page-theme {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.2rem;
+
+        .switch {
+          width: 2.2rem;
+          height: 1rem;
+          border-radius: 1rem;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0.8rem;
+            height: 0.8rem;
+            top: 2px; // TO GIVE AN EFFECT OF CIRCLE INSIDE SWITCH
+            left: 2px;
+          }
+        }
+
+        .checkbox:checked + .switch::after {
+          left: 1.2rem;
+        }
+      }
+    }
+  }
+
+  #section {
+    &-a {
+      .showcase-board {
+        padding: 1.6rem;
+      }
+
+      .board {
+        margin-bottom: 1.7rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .social-info-header {
+          .username {
+            font-size: 0.7rem;
+          }
+        }
+
+        .social-followers {
+          font-size: 2.5rem;
+        }
+
+        .social-followers-subtext {
+          font-size: 0.6rem;
+          letter-spacing: 0.2rem;
+        }
+
+        .social-info-footer {
+          i {
+            font-size: 0.7rem;
+          }
+
+          .showcase-rate {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+
+    &-b {
+      .overview {
+        &-board {
+          height: 3.7rem;
+          margin-bottom: 1rem;
+        }
+
+        &-rate {
+          font-size: 0.7rem;
+        }
+
+        &-header {
+          font-size: 0.7rem;
+        }
+
+        &-number {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  #footer {
+    margin-top: 0;
+
+    .footer-text {
+      font-size: 0.6rem;
+    }
+  }
+}
